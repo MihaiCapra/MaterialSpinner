@@ -34,6 +34,6 @@
         android:layout_height="wrap_content"
         app:ms_dropdown_height="wrap_content"
         app:ms_dropdown_max_height="350dp"
-        app:ms_show_as_popup="true" />
+        app:ms_show_as_popup="false" />
 
 </RelativeLayout>

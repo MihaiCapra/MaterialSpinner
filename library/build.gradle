@@ -12,8 +12,8 @@ android {
 }
 
 dependencies {
-  implementation 'androidx.annotation:annotation:1.0.0'
+  implementation 'androidx.annotation:annotation:1.0.2'
   testImplementation 'junit:junit:4.12'
 }
 
-apply from: rootProject.file('gradle/maven-push.gradle')
+//apply from: rootProject.file('gradle/maven-push.gradle')
