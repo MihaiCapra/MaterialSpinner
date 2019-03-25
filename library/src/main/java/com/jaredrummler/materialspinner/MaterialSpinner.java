@@ -498,7 +498,7 @@ public class MaterialSpinner extends TextView {
             animateArrow(true);
         }
         nothingSelected = true;
-        popupWindow.showAtLocation(this, Gravity.CENTER, 0, 0);
+        popupWindow.showAsDropDown(this);
     }
 
     /**
