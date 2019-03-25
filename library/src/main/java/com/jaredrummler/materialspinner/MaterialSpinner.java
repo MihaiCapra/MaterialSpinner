@@ -44,13 +44,13 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import androidx.annotation.ColorInt;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * A spinner that shows a {@link PopupWindow} under the view when clicked.
@@ -498,10 +498,7 @@ public class MaterialSpinner extends TextView {
             animateArrow(true);
         }
         nothingSelected = true;
-        int[] location = new int[2];
-        getLocationInWindow(location);
-        int y = getHeight();
-        popupWindow.showAtLocation(this, Gravity.BOTTOM, 0, y);
+        popupWindow.showAtLocation(this, Gravity.CENTER, 0, 0);
     }
 
     /**

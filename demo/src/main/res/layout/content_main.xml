@@ -32,8 +32,6 @@
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="12dp"
         app:ms_dropdown_height="wrap_content"
         app:ms_dropdown_max_height="350dp"
         app:ms_show_as_popup="false" />
