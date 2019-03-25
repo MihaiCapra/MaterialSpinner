@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (C) 2016 Jared Rummler
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,20 +15,18 @@
   ~
   -->
 
-<TextView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tv_tinted_spinner"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="48dp"
     android:layout_gravity="start|center_vertical"
     android:ellipsize="marquee"
     android:gravity="center_vertical"
     android:minHeight="@dimen/ms__item_height"
-    android:paddingBottom="@dimen/ms__popup_padding_top"
-    android:paddingLeft="@dimen/ms__popup_padding_left"
-    android:paddingRight="@dimen/ms__popup_padding_left"
     android:paddingStart="@dimen/ms__popup_padding_left"
+    android:paddingLeft="@dimen/ms__popup_padding_left"
     android:paddingTop="@dimen/ms__popup_padding_top"
-    android:singleLine="true"
-    />
+    android:paddingRight="@dimen/ms__popup_padding_left"
+    android:paddingBottom="@dimen/ms__popup_padding_top"
+    android:singleLine="true" />
 
