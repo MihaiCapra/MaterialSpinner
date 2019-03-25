@@ -500,9 +500,8 @@ public class MaterialSpinner extends TextView {
         nothingSelected = true;
         int[] location = new int[2];
         getLocationInWindow(location);
-        int x = location[0];
-        int y = getHeight() + location[1];
-        popupWindow.showAtLocation(this, Gravity.TOP | Gravity.START, x, y);
+        int y = getHeight();
+        popupWindow.showAtLocation(this, Gravity.BOTTOM, 0, y);
     }
 
     /**
