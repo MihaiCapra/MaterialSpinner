@@ -65,7 +65,6 @@ public class MaterialSpinner extends TextView {
     private Drawable arrowDrawable;
     private boolean hideArrow;
     private boolean nothingSelected;
-    private boolean showAsPopUp = false;
     private int popupWindowMaxHeight;
     private int popupWindowHeight;
     private int selectedIndex;
@@ -124,7 +123,6 @@ public class MaterialSpinner extends TextView {
             hintColor = ta.getColor(R.styleable.MaterialSpinner_ms_hint_color, defaultColor);
             arrowColor = ta.getColor(R.styleable.MaterialSpinner_ms_arrow_tint, textColor);
             hideArrow = ta.getBoolean(R.styleable.MaterialSpinner_ms_hide_arrow, false);
-            showAsPopUp = ta.getBoolean(R.styleable.MaterialSpinner_ms_show_as_popup, false);
             hintText = ta.getString(R.styleable.MaterialSpinner_ms_hint) == null ? ""
                     : ta.getString(R.styleable.MaterialSpinner_ms_hint);
             popupWindowMaxHeight = ta.getDimensionPixelSize(R.styleable.MaterialSpinner_ms_dropdown_max_height, 0);
@@ -496,17 +494,15 @@ public class MaterialSpinner extends TextView {
      * Show the dropdown menu
      */
     public void expand() {
-        if (canShowPopup()) {
-            if (!hideArrow) {
-                animateArrow(true);
-            }
-            nothingSelected = true;
-            if (showAsPopUp) {
-                popupWindow.showAtLocation(this, Gravity.BOTTOM, 0, popupWindow.getHeight());
-            } else {
-                popupWindow.showAsDropDown(this);
-            }
+        if (!hideArrow) {
+            animateArrow(true);
         }
+        nothingSelected = true;
+        int[] location = new int[2];
+        getLocationInWindow(location);
+        int x = location[0];
+        int y = getHeight() + location[1];
+        popupWindow.showAtLocation(this, Gravity.TOP | Gravity.START, x, y);
     }
 
     /**
